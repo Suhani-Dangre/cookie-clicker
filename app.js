@@ -1,69 +1,30 @@
+// let averageEl = document.getElementById('average')
+// averageEl.innerHTML=`Hi ${average}`
 
-// variables
+// let test1 = prompt('First Score')
 
-// bucket that holds one peice of data
+// let test2 = prompt('Second Score')
 
-//declar - assign a value
+// let test3 = prompt('Third Score')
 
-// let x = 3
-// let y = 4
-// let z = x + y // z = 7
-
-// z = z + 10 //now z = 17
-
-// let word = 'this is a string'
-// let sentance = "this is a string" 
-// let sentance2 = `z is ${z}` // takes the value of variable and displays it in a string
-
-// let name= 'bob'
-// console.log(x)
-// console.log(`build a string ${x}`)
-
-// console.log(`Hi ${name}`)
-
-// let answer = prompt('Question?')
-
-// console.log(`you answered: ${answer}`)
-
-// Ask user for name, ask for last three test scores,
-//0-100, one at a time, then calculate test average, log name +avg
-
-let nameEl = document.getElementById('name')
-let averageEl = document.getElementById('average')
-
-console.log(nameEl)
+// console.log('test1', test1)
+// console.log('test2', test2)
+// console.log('test3', test3)
 
 
-
-let name = prompt('What is your name?')
-console.log(`Name is ${name}`)
-
-nameEl.innerHTML=`Hi ${name}`
-
-let test1 = prompt('First Score')
-
-let test2 = prompt('Second Score')
-
-let test3 = prompt('Third Score')
-
-console.log('test1', test1)
-console.log('test2', test2)
-console.log('test3', test3)
-
-// type
-//number - 3 3.14  x + y
-//strings- 'abc' 'a3' '346'
-
-test1 = parseInt(test1, 10)
-
-test2 = parseInt(test2, 10)
-
-test3 = parseInt(test3, 10)
-
-let average = (test1 + test2 + test3) / 3
-
-averageEl.innerHTML= `Your average is ${average}`
-
-console.log(`Hi ${name}. Your average is ${average}`)
+let Adj1 = prompt('Enter an adjective')
+let nationality1 = prompt('Enter a nationality')
+let person1 = prompt('Enter a name')
+let noun1 = prompt('Enter a noun')
+let Adj2 = prompt('Enter an adjective')
+let noun2 = prompt('Enter a noun')
+let Adj3 = prompt('Enter an adjective')
+let Adj4 = prompt('Enter an adjective')
+let nounP1 = prompt('Enter a plural noun')
+let noun3 = prompt('Enter a noun')
+let number = prompt('Enter a number')
+let shape = prompt('Enter a plural shape')
+let food = prompt('Enter a food')
+let number2 = prompt('Enter a number')
 
 
