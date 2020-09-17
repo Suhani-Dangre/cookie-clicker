@@ -1,21 +1,7 @@
-// let averageEl = document.getElementById('average')
-// averageEl.innerHTML=`Hi ${average}`
-
-// let test1 = prompt('First Score')
-
-// let test2 = prompt('Second Score')
-
-// let test3 = prompt('Third Score')
-
-// console.log('test1', test1)
-// console.log('test2', test2)
-// console.log('test3', test3)
-
-
+//yay, Javascript!
 let Adj1 = prompt('Enter an adjective')
 console.log('Adjective', Adj1)
 let Adj1El = document.getElementById('Adj1')
-
 
 let nationality1 = prompt('Enter a nationality')
 console.log('nationality', nationality1)
@@ -69,9 +55,13 @@ let number2 = prompt('Enter a number')
 console.log('number', number2)
 let number2El = document.getElementById('number2')
 
+let sport = prompt('Enter a sport')
+console.log('sport', sport)
+let sportEl = document.getElementById(sport)
+
 //Final Story
 Adj1El.innerHTML=`Pizza was invented by a ${Adj1} ${nationality1} chef named ${person1}.
  To make pizza, you need to take a lump of ${noun1}, and make a thin, round ${Adj2} ${noun2}.
  Then you cover it with ${Adj3} sauce, ${Adj4} cheese, and fresh chopped ${nounP1}.
- When it is done, cut it into ${number} ${shape}. Some kids like ${food} pizza.
- If I could, I would eat pizza ${number2} times a day!`
+ When it is done, cut it into ${number} ${shape}. Some kids like ${food} pizza. Many people
+ after a long day of ${sport}. If I could, I would eat pizza ${number2} times a day!`
