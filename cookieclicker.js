@@ -40,6 +40,7 @@ function buyTripler(){
     clickCount= clickCount - 30
     scoreEl.innerHTML= clickCount
     triplerButton.classList.add('remove')
+    cookieEl.classList.add('filter')
     countChange = 3
 }
 triplerButton.addEventListener('click', buyTripler)

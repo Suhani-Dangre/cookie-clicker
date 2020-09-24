@@ -18,3 +18,8 @@
     visibility: hidden; /* not display, space */
 
 }
+
+.filter{
+
+    filter: grayscale(100%);
+}
