@@ -23,3 +23,7 @@
 
     filter: grayscale(100%);
 }
+
+.background{
+    background-color: rgb(163, 241, 255);
+}
