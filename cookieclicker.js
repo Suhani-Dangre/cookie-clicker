@@ -9,16 +9,9 @@ let autoButton=document.getElementById('auto')
 let tenCount = clickCount % 10
 let bodyEl= document.getElementById('body') 
 let cookieEl2= document.getElementById('cookie2')
+let spaceCookieButton= document.getElementById('spaceCookie')
+let infoEl = document.getElementById('info')
 
-// //auto clicker
-// function buyAuto(){
-//     clickCount= clickCount - 30
-//     scoreEl.innerHTML= clickCount
-//     autoButton.classList.add('remove')
-//     countChange = 4
-      
-// }
-// autoButton.addEventListener('click', buyAuto)
 
 
 function cookieClicked(){
@@ -39,18 +32,18 @@ function cookieClicked(){
         }
 
     }
-//     if (clickCount >=30){
-//     if (countChange === 3){
-//         autoButton.classList.remove('remove')
-//     }
-// }
-     if (tenCount === 0){
+    if (clickCount >= 50){
+        if(countChange === 3){
+            spaceCookieButton.classList.remove('remove')
+        }
+    }
+     if (clickCount % 10 === 0){
         congratsEl.classList.remove('remove')
-        console.log(`${tenCount}`)
+        
 }
-    if (tenCount !== 0){
+    if (clickCount % 10 != 0){
         congratsEl.classList.add('remove')
-        console.log(`${tenCount}`)
+    
     }
 }
 
@@ -115,6 +108,53 @@ removeButton.addEventListener('click', hideCookie)
 showButton.classList.add('remove')
 
 
+//Second cookie code 
+
+function buySpaceCookie(){
+    clickCount= clickCount - 30
+    scoreEl.innerHTML= clickCount
+    countChange = 4
+    spaceCookieButton.classList.add('remove')
+    cookieEl2.classList.remove('remove')
+    infoEl.classList.remove('remove')
+}
+spaceCookieButton.addEventListener('click', buySpaceCookie)
+
+
+document.body.onkeydown = function(e){
+    if(e.keyCode == 32){
+        
+    cookieEl2.classList.add('shrink')
+    bodyEl.classList.remove('background')
+    if (clickCount % 10 === 0){
+        congratsEl.classList.remove('remove')
+        
+}
+    if (clickCount % 10 != 0){
+        congratsEl.classList.add('remove')
+    
+    }
+    }
+}
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+        clickCount = clickCount + countChange
+    scoreEl.innerHTML = clickCount
+        cookieEl2.classList.remove('shrink')
+        bodyEl.classList.add('background')
+        infoEl.classList.add('remove')
+        
+        if (clickCount % 10 === 0){
+            congratsEl.classList.remove('remove')
+            
+    }
+        if (clickCount % 10 != 0){
+            congratsEl.classList.add('remove')
+        
+        }
+    }
+}
+
 /* Challenges:
 0. Display a celebration message any time the user passes a score that is a multiple of 10
 
@@ -124,36 +164,3 @@ showButton.classList.add('remove')
    Remeber to tell the user what to do
 
 3. Allow the user to purchase a cookie autoclicker (hint: reserch and use setInterval) */
-/*
-function cookieClicked2(){
-    clickCount = clickCount + countChange
-    scoreEl.innerHTML = clickCount
-}
-
-
-//shrink + grow on click + Change Background color
-
-function shrink() {
-    cookieEl2.classList.add('shrink')
-    
-}
-function grow() {
-cookieEl2.classList.remove('shrink')
-
-}
-cookieEl2.addEventListener('click', cookieClicked)
-cookieEl2.addEventListener('mousedown', shrink)
-cookieEl2.addEventListener('mouseup', grow)
-*/
-document.body.onkeydown = function(e){
-    if(e.keyCode == 32){
-        clickCount = clickCount + countChange
-    scoreEl.innerHTML = clickCount
-    cookieEl2.classList.add('shrink')
-    }
-}
-document.body.onkeyup = function(e){
-    if(e.keyCode == 32){
-        cookieEl2.classList.remove('shrink')
-    }
-}
